@@ -1,8 +1,8 @@
-// src/components/PlatformSummarySection.tsx
-
+// components/PlatformSummarySection.tsx
 import React from "react";
-import { Card } from "./Card"; // assumes Card is in the same folder
+import { Card } from "./Card";
 import { cn } from "@/lib/utils";
+import { colors } from "../colors/colors"; // adjust path as needed
 
 interface PlatformItem {
   icon?: string;
@@ -20,9 +20,16 @@ export const PlatformSummarySection: React.FC<PlatformSummarySectionProps> = ({
   data,
 }) => {
   return (
-    <section className="bg-white py-20" id="about">
+    <section
+      id="about"
+      className="py-20"
+      style={{ backgroundColor: "#ffffff" }}
+    >
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center text-primary">
+        <h2
+          className="text-3xl font-bold text-center"
+          style={{ color: colors.primary }}
+        >
           About Trendyqash
         </h2>
 
@@ -32,7 +39,10 @@ export const PlatformSummarySection: React.FC<PlatformSummarySectionProps> = ({
               key={idx}
               icon={
                 item.icon ? (
-                  <i className={cn(item.icon, "text-primary mr-2")} />
+                  <i
+                    className={cn(item.icon, "mr-2")}
+                    style={{ color: colors.primary }}
+                  />
                 ) : undefined
               }
               title={item.title}
@@ -43,7 +53,8 @@ export const PlatformSummarySection: React.FC<PlatformSummarySectionProps> = ({
                   : undefined
               }
               audioUrl={item.audio}
-              className="bg-light text-left"
+              className="text-left"
+              style={{ backgroundColor: colors.secondary }}
             />
           ))}
         </div>

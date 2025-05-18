@@ -1,6 +1,9 @@
-import { Card } from "./card";
+// components/TestimonialsSection.tsx
+
+import { Card } from "./Card";
 import { ScrollArea } from "./ui/scroll-area";
 import { Separator } from "./ui/separator";
+import { colors } from "../colors/colors";
 
 interface Testimonial {
   name: string;
@@ -14,9 +17,15 @@ interface TestimonialsProps {
 
 export const TestimonialsSection: React.FC<TestimonialsProps> = ({ data }) => {
   return (
-    <section id="testimonials" className="bg-white py-20">
+    <section
+      id="testimonials"
+      className="py-20"
+      style={{ backgroundColor: "#ffffff" }}
+    >
       <div className="container mx-auto text-center px-6">
-        <h2 className="text-3xl font-bold text-dark">What Our Users Say</h2>
+        <h2 className="text-3xl font-bold" style={{ color: colors.dark }}>
+          What Our Users Say
+        </h2>
 
         <ScrollArea className="w-full whitespace-nowrap mt-8 overflow-x-auto pb-2">
           <div className="flex gap-6">
@@ -25,10 +34,11 @@ export const TestimonialsSection: React.FC<TestimonialsProps> = ({ data }) => {
                 key={idx}
                 title={`— ${item.name}`}
                 description={item.feedback}
-                className="bg-gray-100 text-center shadow-lg p-6 min-w-[300px] max-w-sm mx-auto"
+                className="text-center shadow-lg p-6 min-w-[300px] max-w-sm mx-auto"
+                style={{ backgroundColor: colors.secondary }}
               >
                 <Separator className="my-4" />
-                <div className="text-yellow-500 text-xl">
+                <div style={{ color: "#facc15", fontSize: "1.25rem" }}>
                   {"⭐".repeat(item.rating)}
                 </div>
               </Card>

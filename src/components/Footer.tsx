@@ -3,14 +3,18 @@
 import React from "react";
 import { Separator } from "./ui/separator";
 import { Facebook, Twitter, Instagram } from "lucide-react";
+import { colors } from "../colors/colors"; // adjust the import path if needed
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-dark text-white py-10 px-6">
+    <footer
+      className="py-10 px-6"
+      style={{ backgroundColor: colors.dark, color: "#ffffff" }}
+    >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h3 className="text-xl font-bold mb-3">Trendyqash</h3>
-          <p className="text-muted-foreground">
+          <p style={{ color: "#cccccc" }}>
             Your trusted financial companion in the digital age.
           </p>
         </div>
@@ -18,26 +22,13 @@ export const Footer: React.FC = () => {
         <div>
           <h4 className="font-semibold mb-3">Quick Links</h4>
           <ul className="space-y-1">
-            <li>
-              <a href="#home" className="hover:underline">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="hover:underline">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#testimonials" className="hover:underline">
-                Testimonials
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="hover:underline">
-                Join
-              </a>
-            </li>
+            {["Home", "About", "Testimonials", "Join"].map((label, idx) => (
+              <li key={idx}>
+                <a href={`#${label.toLowerCase()}`} className="hover:underline">
+                  {label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -47,21 +38,24 @@ export const Footer: React.FC = () => {
             <a
               href="#"
               aria-label="Facebook"
-              className="hover:text-accent flex items-center gap-1"
+              className="flex items-center gap-1 hover:underline"
+              style={{ color: colors.accent }}
             >
               <Facebook size={18} /> Facebook
             </a>
             <a
               href="#"
               aria-label="Twitter"
-              className="hover:text-accent flex items-center gap-1"
+              className="flex items-center gap-1 hover:underline"
+              style={{ color: colors.accent }}
             >
               <Twitter size={18} /> Twitter
             </a>
             <a
               href="#"
               aria-label="Instagram"
-              className="hover:text-accent flex items-center gap-1"
+              className="flex items-center gap-1 hover:underline"
+              style={{ color: colors.accent }}
             >
               <Instagram size={18} /> Instagram
             </a>
@@ -69,9 +63,12 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      <Separator className="my-6 bg-white/10" />
+      <Separator
+        className="my-6"
+        style={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+      />
 
-      <div className="text-center text-sm text-muted-foreground">
+      <div className="text-center text-sm" style={{ color: "#cccccc" }}>
         © {new Date().getFullYear()} Trendyqash. All rights reserved.
       </div>
     </footer>

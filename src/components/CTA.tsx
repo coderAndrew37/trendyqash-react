@@ -1,8 +1,14 @@
+// components/CtaBanner.tsx
 import { TwoColumn } from "./TwoColumn";
+import { colors } from "../colors/colors"; // adjust path as needed
 
 export const CtaBanner = () => {
   return (
-    <section id="contact" className="bg-primary text-white py-20">
+    <section
+      id="contact"
+      className="text-white py-20"
+      style={{ backgroundColor: colors.primary }}
+    >
       <div className="container mx-auto px-6">
         <TwoColumn
           left={
@@ -18,7 +24,8 @@ export const CtaBanner = () => {
               <a
                 href="https://www.heroqash.com/user/register.php?ref=Prixess"
                 target="_blank"
-                className="mt-6 inline-block bg-white text-primary text-lg font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-opacity-90 transition transform hover:scale-105"
+                className="mt-6 inline-block bg-white text-lg font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-opacity-90 transition transform hover:scale-105"
+                style={{ color: colors.primary }}
               >
                 Go to Portal
               </a>

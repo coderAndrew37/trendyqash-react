@@ -8,6 +8,7 @@ import {
 } from "./ui/card";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import { colors } from "../colors/colors";
 
 interface CardProps {
   icon?: React.ReactNode | React.ElementType;
@@ -19,6 +20,7 @@ interface CardProps {
   onCtaClick?: () => void;
   className?: string;
   children?: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -34,9 +36,10 @@ export const Card: React.FC<CardProps> = ({
   return (
     <ShadCard
       className={cn(
-        "rounded-2xl shadow-lg bg-white p-6 space-y-4 text-center transition hover:shadow-xl",
+        "rounded-2xl shadow-lg p-6 space-y-4 text-center transition hover:shadow-xl",
         className
       )}
+      style={{ backgroundColor: "white" }}
     >
       <CardHeader className="flex flex-col items-center">
         {imageUrl && (
@@ -47,12 +50,15 @@ export const Card: React.FC<CardProps> = ({
           />
         )}
         {!imageUrl && icon && (
-          <div className="text-4xl text-primary mb-2">
+          <div style={{ color: colors.primary }} className="text-4xl mb-2">
             {typeof icon === "function" ? React.createElement(icon) : icon}
           </div>
         )}
         {title && (
-          <CardTitle className="text-xl font-bold text-dark mb-1">
+          <CardTitle
+            className="text-xl font-bold mb-1"
+            style={{ color: colors.dark }}
+          >
             {title}
           </CardTitle>
         )}
@@ -77,7 +83,8 @@ export const Card: React.FC<CardProps> = ({
         <CardFooter>
           <Button
             onClick={onCtaClick}
-            className="w-full bg-primary hover:bg-secondary text-white"
+            style={{ backgroundColor: colors.primary, color: "white" }}
+            className="w-full hover:opacity-90"
           >
             {ctaText}
           </Button>

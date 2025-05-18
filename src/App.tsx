@@ -1,34 +1,27 @@
+// src/App.tsx
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HeroNavbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
-import { HeroSection } from "./components/HeroSection";
-import { PlatformSummarySection } from "./components/SummarySection";
-import { MethodsSection } from "./components/EarningMethods";
-import { RegistrationSection } from "./components/RegistrationSection";
-import { platformSummary } from "./data/summary";
-import { earningMethods } from "./data/earningMethods";
-import { FAQSection } from "./components/FaqSection";
-import { faqData } from "./data/faqs";
-import { CtaBanner } from "./components/CTA";
-import { TestimonialsSection } from "./components/TestimonialsSection";
-import { testimonialsData } from "./data/testimonials"; // Make sure this import matches your data file
+import Home from "./pages/Home";
+import Methods from "./pages/Methods";
+import Faq from "./pages/Faq";
 import FloatingWhatsAppButton from "./components/WhatsapButton";
+import { TestimonialsSection } from "./components/TestimonialsSection";
+import { testimonialsData } from "./data/testimonials";
 
 const App = () => {
   return (
-    <>
+    <Router>
       <HeroNavbar />
-      <HeroSection />
-      <PlatformSummarySection data={platformSummary} />
-      <MethodsSection data={earningMethods} />
-      <RegistrationSection />
-      <CtaBanner />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/methods" element={<Methods />} />
+        <Route path="/faq" element={<Faq />} />
+      </Routes>
       <TestimonialsSection data={testimonialsData} />
-      <FAQSection faqs={faqData} />
-      <CtaBanner />
       <FloatingWhatsAppButton />
-
       <Footer />
-    </>
+    </Router>
   );
 };
 

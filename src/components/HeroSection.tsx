@@ -2,10 +2,7 @@ import { TwoColumn } from "./TwoColumn";
 
 export const HeroSection = () => {
   return (
-    <section
-      id="home"
-      className="relative w-full bg-white text-black py-20 animate-fadeIn"
-    >
+    <section id="home" className="relative w-full py-20 animate-fadeIn">
       <div className="container mx-auto">
         <TwoColumn
           left={
@@ -17,14 +14,18 @@ export const HeroSection = () => {
                 Join Trendyqash & start earning from referrals and simple tasks
                 today!
               </p>
-              <p
-                id="countdown"
-                className="text-red-500 font-bold text-lg mt-4"
-              ></p>
+              <p id="countdown" className="text-lg font-bold mt-4"></p>
               <a
                 href="#"
                 target="_blank"
-                className="mt-4 inline-block bg-green-500 text-white text-xl font-bold px-8 py-4 rounded-lg shadow-xl hover:bg-green-600 transition transform hover:scale-105"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block text-xl font-bold px-8 py-4 rounded-lg shadow-xl hover:opacity-90 transition transform hover:scale-105 bg:blue-500 hover:bg-blue-600"
+                onClick={() => {
+                  window.open(
+                    "https://www.heroqash.com/user/register.php?ref=sydney",
+                    "_blank"
+                  );
+                }}
               >
                 🔥 Join Now & Start Earning!
               </a>

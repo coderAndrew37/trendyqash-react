@@ -1,4 +1,5 @@
 import { type Config } from "tailwindcss";
+import { colors } from "./src/colors/colors";
 
 const config: Config = {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
@@ -21,13 +22,7 @@ const config: Config = {
         shake: "shake 1s ease-in-out infinite",
         "fade-in": "fade-in 0.5s ease-in-out",
       },
-      colors: {
-        primary: "#ff6a00",
-        secondary: "#ffbb00",
-        dark: "#000000",
-        accent: "#3e563b",
-        overlay: "#111111",
-      },
+      colors,
     },
   },
   plugins: [],
