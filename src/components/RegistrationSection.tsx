@@ -1,5 +1,3 @@
-// components/RegistrationSection.tsx
-
 import {
   Tooltip,
   TooltipContent,
@@ -7,6 +5,7 @@ import {
   TooltipTrigger,
 } from "./ui/tooltip";
 import { colors } from "../colors/colors"; // adjust import path
+import { REGLINK } from "@/constants";
 
 export const RegistrationSection = () => {
   return (
@@ -23,7 +22,7 @@ export const RegistrationSection = () => {
           <Tooltip>
             <TooltipTrigger asChild>
               <a
-                href="https://www.heroqash.com/user/register.php?ref=Prixess"
+                href={REGLINK}
                 target="_blank"
                 className="mt-6 inline-block text-white text-lg font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-opacity-90 transition"
                 style={{ backgroundColor: colors.primary }}
@@ -73,7 +72,15 @@ export const RegistrationSection = () => {
           </li>
           <li>
             Click{" "}
-            <span style={{ color: "#16a34a", fontWeight: 700 }}>Sign Up</span>{" "}
+            <a
+              href={REGLINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#16a34a", fontWeight: 700 }}
+              className="hover:underline cursor-pointer"
+            >
+              Sign Up
+            </a>{" "}
             and proceed to login.
           </li>
           <li>

@@ -4,6 +4,7 @@ import React from "react";
 import { Separator } from "./ui/separator";
 import { Facebook, Twitter, Instagram } from "lucide-react";
 import { colors } from "../colors/colors"; // adjust the import path if needed
+import { Link } from "react-router-dom";
 
 export const Footer: React.FC = () => {
   return (
@@ -22,11 +23,14 @@ export const Footer: React.FC = () => {
         <div>
           <h4 className="font-semibold mb-3">Quick Links</h4>
           <ul className="space-y-1">
-            {["Home", "About", "Testimonials", "Join"].map((label, idx) => (
+            {["FAQ", "Methods"].map((label, idx) => (
               <li key={idx}>
-                <a href={`#${label.toLowerCase()}`} className="hover:underline">
+                <Link
+                  to={`/${label.toLowerCase()}`}
+                  className="hover:underline"
+                >
                   {label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -36,26 +40,32 @@ export const Footer: React.FC = () => {
           <h4 className="font-semibold mb-3">Follow Us</h4>
           <div className="flex gap-4 items-center">
             <a
-              href="#"
+              href="https://www.facebook.com/"
               aria-label="Facebook"
               className="flex items-center gap-1 hover:underline"
               style={{ color: colors.accent }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Facebook size={18} /> Facebook
             </a>
             <a
-              href="#"
+              href="https://twitter.com/"
               aria-label="Twitter"
               className="flex items-center gap-1 hover:underline"
               style={{ color: colors.accent }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Twitter size={18} /> Twitter
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/"
               aria-label="Instagram"
               className="flex items-center gap-1 hover:underline"
               style={{ color: colors.accent }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Instagram size={18} /> Instagram
             </a>

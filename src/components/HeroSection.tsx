@@ -1,4 +1,5 @@
 import { TwoColumn } from "./TwoColumn";
+import { REGLINK } from "@/constants";
 
 export const HeroSection = () => {
   return (
@@ -21,7 +22,7 @@ export const HeroSection = () => {
               />
 
               <a
-                href="https://www.heroqash.com/user/register.php?ref=sydney"
+                href={REGLINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-block bg-primary text-white text-lg font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-all"
@@ -33,7 +34,7 @@ export const HeroSection = () => {
           right={
             <div className="flex justify-center">
               <img
-                src="/images/heroqash-hero.webp"
+                src="/images/trendyqash-hero.png"
                 alt="Money Growth"
                 className="max-w-sm md:max-w-md animate-bounceIn"
               />

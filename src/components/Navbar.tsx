@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { colors } from "../colors/colors";
 import { Link, useLocation } from "react-router-dom";
+import { REGLINK } from "@/constants";
 
 export const HeroNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,7 @@ export const HeroNavbar = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <Link to="/" className="flex items-center space-x-2">
           <img
-            src="/images/heroqash.webp"
+            src="/images/trendyqash-logo.png"
             alt="Heroqash Logo"
             className="w-8 h-8"
           />
@@ -44,7 +45,7 @@ export const HeroNavbar = () => {
         </nav>
 
         <a
-          href="https://www.heroqash.com/user/register.php?ref=Sydney"
+          href={REGLINK}
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:block text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition"
@@ -89,7 +90,7 @@ export const HeroNavbar = () => {
                 </Link>
               ))}
               <a
-                href="https://www.heroqash.com/user/register.php?ref=Sydney"
+                href={REGLINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block bg-primary text-white text-lg px-4 py-2 rounded-lg hover:bg-opacity-90 transition"

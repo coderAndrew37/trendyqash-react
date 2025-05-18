@@ -1,6 +1,7 @@
 import React from "react";
 import { colors } from "../colors/colors";
 import { Button } from "./ui/button";
+import { REGLINK } from "@/constants";
 
 export const CtaBanner: React.FC = () => {
   return (
@@ -19,11 +20,7 @@ export const CtaBanner: React.FC = () => {
           asChild
           className="mt-6 text-lg font-semibold px-6 py-3 bg-white text-primary shadow-lg hover:bg-opacity-90 transition hover:scale-105"
         >
-          <a
-            href="https://www.heroqash.com/user/register.php?ref=Prixess"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={REGLINK} target="_blank" rel="noopener noreferrer">
             Go to Portal
           </a>
         </Button>
