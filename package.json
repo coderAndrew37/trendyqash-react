@@ -1,13 +1,23 @@
 {
-  "name": "trendyqash-react",
+  "name": "trendyqash",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
+  "description": "TrendyQash - Verified Money-Making Methods That Work",
+  "author": "Omollo Andrew",
+  "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coderAndrew37/trendyqash-react.git"
+  },
   "scripts": {
+    "clean": "rm -rf dist && rm -rf .turbo && rm -rf node_modules/.vite",
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run lint && npm run typecheck"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.10",

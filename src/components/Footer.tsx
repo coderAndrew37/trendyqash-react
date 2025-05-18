@@ -79,7 +79,19 @@ export const Footer: React.FC = () => {
       />
 
       <div className="text-center text-sm" style={{ color: "#cccccc" }}>
-        © {new Date().getFullYear()} Trendyqash. All rights reserved.
+        <span>
+          © {new Date().getFullYear()} Trendyqash. All rights reserved.
+        </span>
+        <span className="mx-2">|</span>
+        <a
+          href="https://sleeksites.co.ke/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline"
+          style={{ color: colors.accent }}
+        >
+          Designed by SleekSites
+        </a>
       </div>
     </footer>
   );
