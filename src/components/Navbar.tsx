@@ -11,7 +11,7 @@ export const HeroNavbar = () => {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Methods", href: "/methods" },
+    { label: "Earning Methods", href: "/methods" },
     { label: "FAQ", href: "/faq" },
   ];
 

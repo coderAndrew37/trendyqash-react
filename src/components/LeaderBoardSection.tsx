@@ -7,7 +7,9 @@ const leaderboard = [
 export const LeaderboardSection = () => (
   <section className="py-20 bg-light">
     <div className="container mx-auto text-center px-6">
-      <h2 className="text-3xl font-bold text-dark mb-6">Top Earners Today</h2>
+      <h2 className="text-3xl font-bold text-dark mb-6">
+        Top Earners This Week
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {leaderboard.map((user, idx) => (
           <div

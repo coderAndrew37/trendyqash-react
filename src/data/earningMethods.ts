@@ -15,7 +15,7 @@ export const earningMethods: Array<{
     icon: "fas fa-gift",
     title: "Welcome Bonus",
     description:
-      "Create an account on HEROQASH and receive a free redeemable bonus of KSH.100.",
+      "Create an account on TrendyQASH and receive a free redeemable bonus of KSH.100.",
   },
   {
     icon: "fas fa-smile",
