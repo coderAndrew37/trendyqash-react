@@ -2,32 +2,31 @@ import { TwoColumn } from "./TwoColumn";
 
 export const HeroSection = () => {
   return (
-    <section id="home" className="relative w-full py-20 animate-fadeIn">
+    <section id="home" className="relative w-full py-24 bg-white">
       <div className="container mx-auto">
         <TwoColumn
           left={
             <div className="text-center md:text-left">
-              <h1 className="text-4xl font-bold leading-tight">
-                💰 Earn Money Online – No Experience Needed!
+              <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-dark">
+                🚀 Say Hello to Easy Earnings
               </h1>
-              <p className="text-lg mt-4">
-                Join Trendyqash & start earning from referrals and simple tasks
-                today!
+              <p className="text-lg mt-4 text-textSecondary max-w-xl">
+                We built Trendyqash for people just like you — no fluff, no tech
+                skills, just real ways to earn from your phone.
               </p>
-              <p id="countdown" className="text-lg font-bold mt-4"></p>
+
+              <p
+                id="countdown"
+                className="text-secondary font-semibold text-base mt-4"
+              />
+
               <a
-                href="#"
+                href="https://www.heroqash.com/user/register.php?ref=sydney"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-block text-xl font-bold px-8 py-4 rounded-lg shadow-xl hover:opacity-90 transition transform hover:scale-105 bg:blue-500 hover:bg-blue-600"
-                onClick={() => {
-                  window.open(
-                    "https://www.heroqash.com/user/register.php?ref=sydney",
-                    "_blank"
-                  );
-                }}
+                className="mt-6 inline-block bg-primary text-white text-lg font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-all"
               >
-                🔥 Join Now & Start Earning!
+                🔥 Join Now & Start Earning
               </a>
             </div>
           }
